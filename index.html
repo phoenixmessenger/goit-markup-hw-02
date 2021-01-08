@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html  lang="ru">
+<html class="root" lang="ru">
 
 <head>
 <meta charset="utf-8"> 
 <meta name="viewport" content="width-device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./css/styles.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 <title>Web Studio (Version  2.0) (Copy)</title>
 </head>
 
 <body>
-<header>
-    <nav>
-        <a><span>Web</span><span>Studio</span></a>
-        <ul>
+
+<header class="header">
+    <nav class="main-nav">
+        <a><span class="logo-name-1">Web</span><span>Studio</span></a>
+        <ul class="nav-list">
             <li>Студия</li>
-            <li>Портфолио</li>
+            <li><a href="./portfolio.html">Портфолио</a></li>
             <li>Контакты</li>
         </ul>
         </nav>
-        <ul>
+        <ul class="nav-contacts">
         <li><a href="mailto:info@example.com">info@example.com</a></li>
         <li><a href="tel:+380991111111">+38 099 111 11 11</a></li>
         </ul>
@@ -25,9 +29,11 @@
 </header>
 
 <main>
-    <section>
-    <a><img src="./images/Bg.png" alt="Web Studio Background" width ="1600" height = "600"></a>
-    <h1>Эффективные решения для вашего бизнеса</h1>
+    <section class="hero">
+    <div>
+        <a><img src="./images/Bg.png" alt="Web Studio Background" width ="1600" height = "600"></a>
+    <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
+     </div>
     <button><span>Заказать услугу</span></button>
     </section>
 

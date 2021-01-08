@@ -1,60 +1,76 @@
+:root {
+  --primary-text-color: #757575;
+  --title-color: #212121;
+  --accent-color: #2196f3;
+  --white-text-color: #ffff;
+  --header-logo-span: #000000;
+  --hero-footer-bg-color: #2f303a;
+}
+
+.hero .btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06cm;
+  margin-top: 30px;
+  padding: 10px 32px;
+  color: var(white-text-color);
+  background: -var (--accent-color);
+  box-shadow: 0px 4px 4px rgba(red, green, blue, alpha);
+  border: transparent;
+}
+
+.hero-title {
+  position: absolute;
+  width: 696px;
+  height: 120px;
+  left: 452px;
+  top: 280px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
 .main-nav {
-  position: relative;
-  width: 1610px;
-  height: 81px;
+  position: absolute;
+  width: 1600px;
+  height: 80px;
   left: 0px;
-  top: -1px;
-}
-.first-name {
-  position: relative;
-  width: 145px;
-  height: 31px;
-  left: 215px;
-  top: 24px;
+  top: 0px;
 
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 31px;
-  /* identical to box height */
-
-  letter-spacing: 0.03em;
-
-  color: #2196f3;
-}
-
-.last-name {
-  position: relative;
-  width: 145px;
-  height: 31px;
-  left: 215px;
-  top: 24px;
-
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 31px;
-  /* identical to box height */
-
-  letter-spacing: 0.03em;
-
-  color: #000000;
+  background: #ffffff;
 }
 
 .nav-list {
+  position: absolute;
+  width: 77px;
+  height: 16px;
+  left: 552px;
+  top: 32px;
+
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
-  color: #212121;
 
-  position: relative;
-  width: 294px;
+  color: #212121;
+}
+
+.nav-contacts {
+  position: absolute;
+  width: 135px;
   height: 16px;
-  left: 0px;
+  left: 1078px;
   top: 32px;
 }
