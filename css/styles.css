@@ -3,9 +3,17 @@
   --title-color: #212121;
   --accent-color: #2196f3;
   --white-text-color: #ffff;
+  --background-color: #ffffff;
   --header-logo-span: #000000;
   --hero-background-color: #000000;
   --hero-footer-bg-color: #2f303a;
+  --section-background-color: #f5f4fa;
+}
+
+.container {
+  max-width: 1600px;
+  max-height: 2831px;
+  margin: auto;
 }
 
 .hero {
@@ -65,48 +73,20 @@
 }
 
 .header {
-  display: absolute;
-  width: 1600px;
+  display: flex;
+  max-width: 1600px;
   height: 80px;
-  left: 0px;
-  top: 0px;
+  margin-top: 32px;
+  justify-content: space-between;
+  text-align: justify;
 
-  background: #ffffff;
+  background: var(--background-color);
 }
 
 .main-nav {
-  display: flex;
+  display: inline-flex;
   width: 100%;
   justify-content: space-between;
-  padding-left: 453px;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: #212121;
-
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 14px;
-  letter-spacing: 0.02em;
-}
-
-.nav-list {
-  display: flex;
-}
-
-.nav-list li {
-  margin-left: 50px;
-}
-
-.nav-list li :hover {
-  color: #2196f3;
-}
-
-.nav-contacts {
-  display: flex;
-  position: relative;
-  padding-left: 331px;
 
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -118,7 +98,37 @@
   color: var(--primary-text-color);
 }
 
-.nav-contacts li :hover {
+.nav-list {
+  padding-left: 93px;
+  width: 100%;
+  display: flex;
+}
+
+.nav-list li {
+  margin-left: 50px;
+}
+
+.nav-list li:hover {
+  color: #2196f3;
+}
+
+.nav-contacts {
+  display: flex;
+  padding-left: 331px;
+  padding-right: 50px;
+  width: 100%;
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+
+  color: var(--primary-text-color);
+}
+
+.nav-contacts li:hover {
   color: var(--accent-color);
 }
 
@@ -127,7 +137,6 @@
 }
 
 .logo-name {
-  position: absolute;
   width: 145px;
   height: 31px;
   padding-left: 215px;
@@ -140,9 +149,28 @@
   font-weight: bold;
   font-size: 26px;
   line-height: 31px;
-  /* identical to box height */
 
   letter-spacing: 0.03em;
+
+  color: var(--title-color);
+}
+
+.logo-name-footer {
+  width: 145px;
+  height: 31px;
+  padding-left: 215px;
+  padding-right: 1240;
+  padding-top: 60px;
+  padding-bottom: 160px;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+
+  color: var(--white-text-color);
 }
 
 .logo-text-color {
@@ -155,8 +183,13 @@
   padding-top: 94px;
 }
 
+.descript-direct {
+  display: flex;
+  max-width: 1170px;
+  justify-content: space-between;
+}
+
 .description-frame {
-  position: relative;
   margin-right: 30px;
   width: 270px;
   height: 101px;
@@ -183,24 +216,80 @@
 
   color: var(--primary-text-color);
 }
+
 .about-us {
   padding-left: 215px;
   padding-top: 94px;
 }
 
+.about-us ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .our-team {
   padding-left: 0px;
   padding-top: 94px;
+
+  background-color: var(--section-background-color);
 }
 
-.footer {
-  position: absolute;
-  width: 1600px;
-  height: 252px;
-  padding-left: 0px;
-  padding-top: 94px;
+.our-team h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
 
-  background: #2f303a;
+  letter-spacing: 0.03em;
+
+  color: var(--title-color);
+}
+
+.our-team span {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+.footer {
+  max-width: 1600px;
+  height: 252px;
+
+  background-color: var(--hero-footer-bg-color);
+}
+
+.footer-address-block {
+  width: 230px;
+  height: 81px;
+  box-sizing: content-box;
+  padding-top: 111px;
+  padding-left: 215px;
+  line-height: 1.5;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* or 171% */
+
+  letter-spacing: 0.03em;
+}
+
+.footer-address-block a {
+  color: var(--primary-text-color);
+}
+
+.street-name {
+  color: var(--white-text-color);
 }
 
 .section-title {
