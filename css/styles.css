@@ -8,9 +8,14 @@
   --hero-background-color: #000000;
   --hero-footer-bg-color: #2f303a;
   --section-background-color: #f5f4fa;
+  --footer-background-color: #2f303a;
 }
 .html {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
 }
 *,
 *::before,
@@ -19,9 +24,10 @@
 }
 .container {
   max-width: 1600px;
-  margin: auto;
-  text-decoration: none;
+  margin: 0 auto;
 }
+
+/* стилизация хедера */
 .header {
   display: flex;
   align-items: center;
@@ -37,6 +43,7 @@
   font-weight: 700;
   letter-spacing: 0.03em;
   margin-left: 215px;
+  color: var(--header-logo-span);
 }
 .logo-accent-color {
   color: var(--accent-color);
@@ -63,12 +70,18 @@
 .svg-container {
   position: relative;
 }
-.svg-container svg {
+.icon {
   position: absolute;
   left: -30px;
+  bottom: 6px;
   background-size: 12px, 16px;
-  color: var(--primary-text-color);
+  fill: currentColor;
 }
+.icon:hover {
+  fill: currentColor;
+}
+
+/* общие классы, применяющиеся по всему документу */
 .head-main-text {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -91,10 +104,55 @@
 }
 .content-list {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   list-style: none;
 }
+.text-image-box {
+  display: inline-block;
+  padding: 20px 20px;
+  line-height: 1.4;
+  margin-right: 10px;
+  text-align: center;
+  position: relative;
+}
+.section-head-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+}
+.paragraph-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+.social-list {
+  max-width: 210px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 10px 0;
+  color: #afb1b8;
+}
+.social-list li {
+  margin-right: 10px;
+  list-style-type: none;
+}
+.social-icon {
+  width: 44px;
+  height: 44px;
+  fill: currentColor;
+}
+
+/* дополнительная стилизация по секциям */
 .hero {
   background-color: var(--hero-background-color);
   max-height: 600px;
@@ -105,10 +163,8 @@
   padding-top: 200px;
 }
 .hero a {
-  text-decoration: none;
-}
-.hero a {
   display: inline-block;
+  text-decoration: none;
   font-family: Roboto, sans-serif;
   color: var(--background-color);
   background-color: var(--accent-color);
@@ -129,17 +185,82 @@
   justify-content: space-between;
   align-items: center;
 }
-.text-image-box {
-  padding: 20px 20px;
-  line-height: 1.4;
-  margin-right: 20px;
+.about-us {
+  margin-bottom: 94px;
 }
-.paragraph-text {
-  font-family: Roboto;
+#about-us .text-image-box h3 {
+  position: absolute;
+  bottom: 12px;
+  color: var(--background-color);
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 370px;
+  padding: 27px 0px 27px 0px;
+}
+.our-team {
+  background: #f5f4fa;
+}
+.our-team .section-head-text {
+  padding: 94px 0px 10px 0px;
+}
+.our-team .content-list {
+  padding-bottom: 94px;
+}
+.team-card {
+  max-width: 270px;
+  display: inline-block;
+  background-color: var(--background-color);
+  margin-right: 20px;
+  text-align: center;
+}
+.our-team .team-card h3 {
+  font-family: Roboto, sans-serif;
+  font-style: bold;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+.our-team .team-card span {
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.3;
   letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+/* стилизация футера */
+.footer {
+  max-height: 252px;
+  background-color: var(--footer-background-color);
+}
+.footer a {
+  text-decoration: none;
+}
+.footer .logo-name {
+  display: inline-block;
+  margin-top: 60px;
+  color: var(--background-color);
+}
+.address-box {
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 2;
+  margin: 20px 0px 60px 215px;
+}
+.footer .address-box a {
+  text-decoration: none;
+}
+.footer .address-box span {
+  color: var(--background-color);
+}
+.footer .address-box .contact {
+  text-decoration: none;
   color: var(--primary-text-color);
 }
