@@ -104,7 +104,9 @@ body {
 }
 .content-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 1170px;
   align-items: center;
   list-style: none;
 }
@@ -229,8 +231,35 @@ body {
   font-size: 16px;
   line-height: 1.3;
   letter-spacing: 0.03em;
-
   color: #757575;
+}
+.customers .content-list {
+  margin-bottom: 94px;
+}
+.customers .section-head-text {
+  padding: 94px 0px 50px 0px;
+}
+.our-customers {
+  border: 1px solid;
+  width: 170px;
+  height: 90px;
+  color: #afb1b8;
+  border-color: #afb1b8;
+  margin-right: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.our-customers-svg {
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  width: 50%;
+  height: 50%;
+  fill: currentColor;
+}
+.our-customers:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /* стилизация футера */
