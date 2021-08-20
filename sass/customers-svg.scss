@@ -1,0 +1,52 @@
+%svgtpl {
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: currentColor;
+}
+.our-customers {
+    border: 1px solid;
+    width: 170px;
+    height: 90px;
+    color: #afb1b8;
+    border-color: #afb1b8;
+    margin-right: 30px;
+    position: relative;
+    cursor: pointer;    
+
+    .clientone {
+        @extend %svgtpl;
+        width: 45px;
+        height: 50px;
+        }    
+    .clienttwo {
+        @extend %svgtpl;
+        width: 49px;
+        height: 52px;
+        }
+    .clientthree {
+        @extend %svgtpl;
+        width: 41px;
+        height: 43px;
+        }
+    .clientfour {
+        @extend %svgtpl;
+        width: 80px;
+        height: 43px;
+        }
+    .clientfive {
+        @extend %svgtpl;
+        width: 59px;
+        height: 47px;
+        }
+    .clientsix {
+        @extend %svgtpl;
+        width: 89px;
+        height: 46px;
+        }
+    &:hover {
+        border-color: var(--accent-color);
+        color: var(--accent-color); 
+    }
+}

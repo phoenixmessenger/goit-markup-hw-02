@@ -15,7 +15,7 @@
 }
 
 body {
-  margin: 0px;
+  margin: 0 auto;
 }
 *,
 *::before,
@@ -23,7 +23,6 @@ body {
   box-sizing: inherit;
 }
 .container {
-  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -32,12 +31,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 215px 0 0;
 }
 .header a {
   text-decoration: none;
 }
-.logo-name {
-  font-family: "Railway", sans-serif;
+.logo-name a {
+  font-family: Railway, sans-serif;
   font-style: bold;
   font-size: 26px;
   font-weight: 700;
@@ -70,36 +70,53 @@ body {
 .svg-container {
   position: relative;
 }
-.icon {
+.icon1 {
   position: absolute;
   left: -30px;
   bottom: 6px;
-  background-size: 12px, 16px;
+  width: 16px;
+  height: 12px;
   fill: currentColor;
 }
-.icon:hover {
+.icon2 {
+  position: absolute;
+  left: -20px;
+  bottom: 4px;
+  width: 10px;
+  height: 16px;
+  fill: currentColor;
+}
+.icon1:hover {
+  fill: currentColor;
+}
+.icon2:hover {
   fill: currentColor;
 }
 
 /* общие классы, применяющиеся по всему документу */
-.head-main-text {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 44px;
-  letter-spacing: 0.03em;
-  line-height: 1.6;
-  color: var(--background-color);
-}
+
 .button {
-  text-align: center;
+  display: inline-block;
+  background-color: var(--accent-color);
+  padding: 10px 32px 10px 32px;
+  position: relative;
+}
+.button a {
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  color: var(--background-color);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
 }
 .section-accent-text {
   font-family: Roboto, sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.6;
+  letter-spacing: 3%;
   text-transform: uppercase;
 }
 .content-list {
@@ -107,15 +124,14 @@ body {
   justify-content: space-between;
   margin: auto;
   max-width: 1170px;
-  align-items: center;
+  align-items: flex-start;
   list-style: none;
 }
 .text-image-box {
   display: inline-block;
-  padding: 20px 20px;
   line-height: 1.4;
   margin-right: 10px;
-  text-align: center;
+  align-items: flex-start;
   position: relative;
 }
 .section-head-text {
@@ -139,67 +155,99 @@ body {
 }
 .social-list {
   max-width: 210px;
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
   margin: 10px 0 10px 0;
-  color: #afb1b8;
 }
 .social-list li {
   margin-right: 10px;
   list-style-type: none;
+  border-radius: 50px;
 }
 .social-icon {
   width: 44px;
   height: 44px;
-  fill: currentColor;
+  --color1: white;
+  --color2: #afb1b8;
+}
+.social-icon :hover {
+  --color1: #2196f3;
+  --color2: white;
 }
 
 /* дополнительная стилизация по секциям */
 .hero {
+  width: 100%;
   background-color: var(--hero-background-color);
   max-height: 600px;
 }
-.hero h1 {
+.hero .head-main-text {
   text-align: center;
   text-transform: uppercase;
   padding-top: 200px;
-}
-.hero a {
-  display: inline-block;
-  text-decoration: none;
-  font-family: Roboto, sans-serif;
-  color: var(--background-color);
-  background-color: var(--accent-color);
+  margin: 0;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.3;
-  padding: 10px 32px 10px 32px;
-  margin: 50px 0px 200px 0px;
+  font-weight: 900;
+  font-size: 44px;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  color: var(--background-color);
+}
+.hero .button {
+  margin: 30px 0 200px 700px;
 }
 .hero .overlay {
   background-image: url(/images/hero-background.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
-.our-features ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.our-features {
+  width: 100%;
+}
+.our-features .content-list {
+  margin-top: 30px;
+}
+.our-features-box {
+  display: inline-block;
+  max-width: 270px;
+  margin-right: 20px;
+}
+.our-features-box .icon3 {
+  width: 70px;
+  height: 70px;
+  background-color: var(--section-background-color);
+  padding: 25px 100px 25px 100px;
+}
+.our-features-box h3 {
+  color: var(--title-color);
+  text-align: left;
+  width: 270px;
+  margin-top: 10px;
+}
+.our-features-box > .paragraph-text {
+  width: 100%;
+  margin-top: 10px;
 }
 .about-us {
+  width: 100%;
   margin-bottom: 94px;
 }
-#about-us .text-image-box h3 {
+.about-us .content-list {
+  width: 100%;
+}
+.about-us .text-image-box h3 {
   position: absolute;
-  bottom: 12px;
+  bottom: -7px;
   color: var(--background-color);
   background-color: rgba(47, 48, 58, 0.8);
   width: 370px;
   padding: 27px 0px 27px 0px;
+  text-align: center;
 }
 .our-team {
-  background: #f5f4fa;
+  width: 100%;
+  background-color: #f5f4fa;
 }
 .our-team .section-head-text {
   padding: 94px 0px 10px 0px;
@@ -207,7 +255,7 @@ body {
 .our-team .content-list {
   padding-bottom: 94px;
 }
-.team-card {
+.our-team .team-card {
   max-width: 270px;
   display: inline-block;
   background-color: var(--background-color);
@@ -233,49 +281,42 @@ body {
   letter-spacing: 0.03em;
   color: #757575;
 }
+.customers {
+  width: 100%;
+}
 .customers .content-list {
   margin-bottom: 94px;
 }
 .customers .section-head-text {
   padding: 94px 0px 50px 0px;
 }
-.our-customers {
-  border: 1px solid;
-  width: 170px;
-  height: 90px;
-  color: #afb1b8;
-  border-color: #afb1b8;
-  margin-right: 30px;
-  position: relative;
-  cursor: pointer;
-}
-.our-customers-svg {
-  position: absolute;
-  top: 20px;
-  left: 60px;
-  width: 50%;
-  height: 50%;
-  fill: currentColor;
-}
-.our-customers:hover {
-  border-color: var(--accent-color);
-  color: var(--accent-color);
-}
+/*иконки в файле _customers-svg*/
 
 /* стилизация футера */
 .footer {
-  max-height: 252px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   background-color: var(--footer-background-color);
+}
+.footcontainer {
+  display: inline-block;
+}
+.footcontainer h3 {
+  color: var(--background-color);
+  margin-top: 72px;
 }
 .footer a {
   text-decoration: none;
 }
 .footer .logo-name {
-  display: inline-block;
   margin-top: 60px;
+}
+.footer .logo-name a {
   color: var(--background-color);
 }
-.address-box {
+.footer .address-box {
   display: inline-block;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -292,4 +333,57 @@ body {
 .footer .address-box .contact {
   text-decoration: none;
   color: var(--primary-text-color);
+}
+.footcontainer .social-list {
+  padding: 0;
+}
+.footer .social-list .social-icon {
+  --color1: rgba(255, 255, 255, 0.1);
+}
+.orderform {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 215px;
+}
+input {
+  width: 307px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #fff;
+  background-color: var(--footer-background-color);
+}
+.btn2 {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent-color);
+  margin-left: 10px;
+  position: relative;
+}
+.btn2 a {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  color: var(--background-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  position: absolute;
+  bottom: 17px;
+  left: 40px;
+}
+.btn2 .social-icon {
+  position: absolute;
+  left: 110px;
+  fill: currentColor;
+}
+
+/* стили для страниці портфолио */
+
+.grid-dimension {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }

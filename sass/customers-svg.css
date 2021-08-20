@@ -1,0 +1,55 @@
+.our-customers .clientone, .our-customers .clienttwo, .our-customers .clientthree, .our-customers .clientfour, .our-customers .clientfive, .our-customers .clientsix {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  fill: currentColor;
+}
+
+.our-customers {
+  border: 1px solid;
+  width: 170px;
+  height: 90px;
+  color: #afb1b8;
+  border-color: #afb1b8;
+  margin-right: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.our-customers .clientone {
+  width: 45px;
+  height: 50px;
+}
+
+.our-customers .clienttwo {
+  width: 49px;
+  height: 52px;
+}
+
+.our-customers .clientthree {
+  width: 41px;
+  height: 43px;
+}
+
+.our-customers .clientfour {
+  width: 80px;
+  height: 43px;
+}
+
+.our-customers .clientfive {
+  width: 59px;
+  height: 47px;
+}
+
+.our-customers .clientsix {
+  width: 89px;
+  height: 46px;
+}
+
+.our-customers:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+/*# sourceMappingURL=customers-svg.css.map */
