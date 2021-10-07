@@ -217,8 +217,17 @@ body {
 .hero .button {
   margin: 30px 0 200px 700px;
 }
+.hero .button a {
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  color: var(--background-color);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+}
 .hero .overlay {
-  background-image: url(/images/hero-background.png);
+  background-image: url(/img/hero-background.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
