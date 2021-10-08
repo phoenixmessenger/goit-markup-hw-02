@@ -228,6 +228,7 @@ body {
 }
 #hero .overlay {
   background-image: url(./img/hero-background.png);
+  width: 100%;
   background-repeat: no-repeat;
   background-position: 50%, 50%;
   background-size: cover;
