@@ -229,6 +229,7 @@ body {
 #hero .overlay {
   background-image: url(./img/hero-background.png);
   background-repeat: no-repeat;
+  background-position: 50%, 50%;
   background-size: cover;
 }
 .our-features {
